@@ -1,0 +1,25 @@
+{
+  "name": "mv2bass",
+  "version": "0.1.0",
+  "description": "Insert aliases for combination of Basscss classes into html files",
+  "main": "mv2bass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "basscss",
+    "templating",
+    "html",
+    "css",
+    "gulpplugin"
+  ],
+  "author": "Anthony Raymond Bullard",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "htmlparser2": "^3.8.3",
+    "lodash": "^3.10.1",
+    "through2": "^2.0.0"
+  }
+}
