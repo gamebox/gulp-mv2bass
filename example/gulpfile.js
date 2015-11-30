@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var mv2bass = require('./gulp-mv2bass.js');
+var mv2bass = require('../gulp-mv2bass.js');
 
 var rules = {
   'body': 'mt5',

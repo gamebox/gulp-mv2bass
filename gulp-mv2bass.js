@@ -9,8 +9,8 @@ module.exports = function(rules) {
     var newFileString = (function() {
       var builder = '';
       return {
-	append: function(chunk) { builder += chunk; console.log(builder); },
-        contents: function() { console.log(builder); return builder; }
+	append: function(chunk) { builder += chunk; },
+        contents: function() { return builder; }
       }
     })();
 
@@ -42,7 +42,6 @@ module.exports = function(rules) {
         return cb(new PluginError(PLUGIN_NAME, err));
       },
       onend: function() {
-        console.log('END called');
         file.contents = new Buffer(newFileString.contents());
         return cb(null, file);
       }
