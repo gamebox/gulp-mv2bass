@@ -28,8 +28,8 @@ Now, just set up your gulp file to `require('gulp-mv2bass');` and then set up yo
 
 ``` json
 {
-  'body': 'mt5',
-  'byline': 'blue mx2 center'
+  "body": "mt5",
+  "byline": "blue mx2 center"
 }
 ```
 
