@@ -1,5 +1,5 @@
 {
-  "name": "mv2bass",
+  "name": "gulp-mv2bass",
   "version": "0.1.0",
   "description": "Insert aliases for combination of Basscss classes into html files",
   "main": "mv2bass.js",
