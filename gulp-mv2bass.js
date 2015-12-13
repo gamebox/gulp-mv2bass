@@ -4,12 +4,17 @@ var PluginError = require('gulp-util').PluginError;
 var through = require('through2');
 var PLUGIN_NAME = 'gulp-mv2bass';
 
-module.exports = function(rules) {
+module.exports = function(rules, callout) {
+  callout = callout || '@';
+  if(callout.length !== 1) {
+    throw new Error('Callout character must be a single character');
+  }
+
   function transform(file, enc, cb) {
     var newFileString = (function() {
       var builder = '';
       return {
-	append: function(chunk) { builder += chunk; },
+      	append: function(chunk) { builder += chunk; },
         contents: function() { return builder; }
       }
     })();
@@ -24,7 +29,7 @@ module.exports = function(rules) {
 
     var Parser = new htmlparser.Parser({
       onopentag: function(name, attrs) {
-        if(attrs['class'] && attrs['class'][0] === '@') {
+        if(attrs['class'] && attrs['class'][0] === callout) {
           attrs['class'] = lookupClass(attrs['class'].slice(1));
         }
         var tagbuilder = '<' + name;

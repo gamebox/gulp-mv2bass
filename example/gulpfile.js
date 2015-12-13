@@ -8,6 +8,6 @@ var rules = {
 
 gulp.task('mv2bass', function() {
   gulp.src('./src/**/*.html')
-  .pipe(mv2bass(rules))
+  .pipe(mv2bass(rules, '#'))
   .pipe(gulp.dest('dist'));
 });
